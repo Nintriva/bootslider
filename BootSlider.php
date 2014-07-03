@@ -24,8 +24,9 @@ class BootSlider extends CListView
 	public function init()
 	{	parent::init();
 
-		Yii::app()->bootstrap->enableTransitions();
-		Yii::app()->bootstrap->registerCarousel();
+		$bootstrap = Yii::app()->bootstrap;
++		$bootstrap->registerCarousel();
++		$bootstrap->enableTransitions();
 
 //		Yii::app()->bootstrap->registerScriptFile('bootstrap.min.js',CClientScript::POS_END);
 //		Yii::app()->bootstrap->registerScrollSpy();		
